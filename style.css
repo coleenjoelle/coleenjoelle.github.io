@@ -6,104 +6,105 @@ body {
     cursor: url("https://uploads-ssl.webflow.com/62af52cf612c974768d3d8c9/639127c31795d00e2b0cc4c5_Group%207%20(4).svg"), auto !important;
 }
 main {
-    text-align: center;
+    text-align: center; /* center the text in the main */
 }
-@keyframes tilt-n-move-shaking {
-    0% {
+@keyframes tilt-n-move-shaking { /* styling to do the shaking for the navigation bar links */
+    0% { /* At the 0% keyframe, the transform property sets the initial position of the element, with no rotation or translation. */
         transform: translate(0, 0) rotate(0deg);
    }
-    25% {
+    25% { /* At the 25% keyframe, the transform property sets a small translation of 5 pixels horizontally and vertically and a rotation of 5 degrees. This creates a small tilt and movement effect.*/
         transform: translate(5px, 5px) rotate(5deg);
    }
-    50% {
+    50% { /* At the 50% keyframe, the transform property resets the position of the element to its original position with no rotation or translation. */
         transform: translate(0, 0) rotate(0deg);
    }
-    75% {
+    75% { /* At the 75% keyframe, the transform property sets a small translation of -5 pixels horizontally and 5 pixels vertically and a rotation of -5 degrees. This creates a slight tilt and movement in the opposite direction*/
         transform: translate(-5px, 5px) rotate(-5deg);
    }
-    100% {
+    100% { /* Finally, at the 100% keyframe, the transform property resets the position of the element to its original position with no rotation or translation, completing the animation cycle. */
         transform: translate(0, 0) rotate(0deg);
    }
 }
 header {
     color: white;
    /* make text in header white */
-    font-weight: bold;
-    background-image: url("../IMG/spesthing.jpg");
-    text-align: center;
+    font-weight: bold; /* bold the text */
+    background-image: url("../IMG/spesthing.jpg"); /* add a background image for the header */
+    text-align: center; /* center the text */
    /* center all text in the header */
     ;
-    padding: 10em;
+    padding: 10em; /* add a padding for the header */
    /* there will be 2em of space between the text & edges of the header on all sides */
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    min-height: 100%;
-    background-repeat: no-repeat;
+    position: relative; /* header is positioned relative to its normal position. */
+    background-position: center; /* centers the background image within the header element. */
+    background-size: cover; /*  the background image will cover the entire header element, even if it needs to be scaled up or down to fit. */
+    min-height: 100%; /* property sets the minimum height of the header element to 100% of the viewport height. */
+    background-repeat: no-repeat; /* the background image will not repeat itself if it doesn't fit the header element's dimensions. */
 }
-header > h3 {
+header > h3 { /* making its text significantly larger and adding a subtle shadow effect to make it stand out from the rest of the page. */
     font-size: 340%;
-    text-shadow: 2px 4px 4px #67ADe0;
+    text-shadow: 2px 4px 4px #67ADe0; /* property adds a shadow effect to the text inside the */
 }
 .carousel-item > img{
-    background-color: #304C89;
-    width: 100%;
-    height: 500px;
+    background-color: #304C89; /* used to provide a fallback color in case the image fails to load or takes some time to load, and the background becomes visible in the meantime. */
+    width: 100%; /*  sets the width of the image to 100%, which means the image will fill its container horizontally. */
+    height: 500px; /* all images in the carousel the same height */
 }
 #carouselExampleIndicators{
-    margin: -16px 0 0 0;
+    margin: -16px 0 0 0; /* moving it closer to the top of the page. */
 }
 div.author {
-    padding: 2em;
+    padding: 2em; /* padding around the div */
 }
 div.professor {
-    margin-right: 2cm;
+    margin-right: 2cm; /* add margin right */
 }
 #contents > ul {
-    text-align: left;
-    background-color: #67ADe0;
-    border-radius: 33cm;
-    padding-top: 4em;
-    padding-bottom: 4em;
-    list-style-type: none;
-    margin-left: 2em;
-    margin-top: 1em;
+    text-align: left; /* setting the text alignment of the unordered list to the left. */
+    background-color: #67ADe0; 
+    border-radius: 33cm; /* This will give the unordered list a circular shape with a diameter of approximately 66cm. */
+    padding-top: 4em; /* create some vertical space between the contents of the unordered list and the surrounding elements.*/
+    padding-bottom: 4em; /* create some vertical space between the contents of the unordered list and the surrounding elements.*/
+    list-style-type: none; /* no bullet points for each list item. */
+    margin-left: 2em; /* create some space between the left edge of the unordered list and the surrounding elements*/
+    margin-top: 1em; /* create some space between the left edge of the unordered list and the surrounding elements */
 }
 #contents > ul > li > a {
    /* only edit the a elements under li, ul, nav*/
     margin: 3px;
-    color: lavender;
+    color: white;
 }
 .summary {
     padding: 40px;
 }
 .note {
-    font-weight: bolder;
+    font-weight: bolder; /* make font very bold */
     color: #004277;
 }
 .title {
-    font-size: xx-large;
+    font-size: xx-large; /* make font very large */
 }
 div.summary > img {
     width: 500px;
 }
 .MECHANICS, .GRADING {
-    background-color: #67ADe0;
+    background-color: #67ADe0; /* change color of the container */
 }
-input {
-    width: 300px;
-}
+
 #MATH_CENTER_HOURS table * {
-    border: 1px solid;
+    border: 1px solid; /* setting a 1px solid border around each of the table elements */
     border-color: white;
     text-align: center;
     padding-left: 5px;
     padding-right: 5px;
 }
+
 #MATH_CENTER_HOURS th.weekday {
-    width: 120px;
-    text-decoration: underline;
+    /* Selects all 'th' elements with class 'weekday' that are children of an element with ID 'MATH_CENTER_HOURS' */
+    width: 120px; /* Sets the width of the 'th' element to 120 pixels */
+    text-decoration: underline; /* Adds an underline decoration to the text content of the 'th' element */
 }
+
 .cox {
     background-color: khaki;
     color: black;
@@ -112,22 +113,39 @@ input {
     background-color: darkseagreen;
     color: black;
 }
+
 .colorBlock {
+    /* Style for elements with class "colorBlock" */
+    /* Set the background color to a dark blue shade */
     background-color: #0C5191;
+    /* Set the border style to solid */
     border-style: solid;
+    /* Set the border width to 0.3em */
     border-width: .3em;
+    /* Add 1em of padding on all sides */
     padding: 1em;
+    /* Add 40px of margin on all sides */
     margin: 40px;
 }
-.columns{
+
+
+.columns {
+    /* Style for elements with class "columns" */
+    /* Set the number of columns to 2 */
     columns: 2;
 }
-#MATH{
+
+#MATH {
+    /* Set the background color to a dark blue shade */
     background-color: #0C5191;
+    /* Set the border style to solid */
     border-style: solid;
+    /* Set the border width to 0.3em */
     border-width: .3em;
+    /* Add 1em of padding on all sides */
     padding: 1em;
 }
+
 #CAM{
     background-color: #1170CB;
     border-style: solid;
@@ -238,25 +256,42 @@ input {
     text-decoration: underline;
 }
 /* The following formats the tables for classes*/
-.table-wrapper{
+.table-wrapper {
+    /* Set the margin on the top, right, and bottom to 10px and the left margin to 70px */
     margin: 10px 70px 70px;
+    /* Set the background color to a dark blue shade */
     background-color: #0C5191;
+    /* Set the border style to solid */
     border-style: solid;
+    /* Set the border width to 0.3em */
     border-width: .3em;
+    /* Add 1em of padding on all sides */
     padding: 1em;
+    /* Set the margin to 40px on all sides */
     margin: 40px;
 }
+
 .fl-table {
+    /* Set the border radius to 5px */
     border-radius: 5px;
+    /* Set the font size to 12px */
     font-size: 12px;
+    /* Set the font weight to normal */
     font-weight: normal;
+    /* Remove the border */
     border: none;
+    /* Collapse the table border */
     border-collapse: collapse;
+    /* Set the table width to 100% */
     width: 100%;
+    /* Set the maximum table width to 100% */
     max-width: 100%;
+    /* Prevent line breaks within table cells */
     white-space: nowrap;
+    /* Set the background color to white */
     background-color: white;
 }
+
 .fl-table td, .fl-table th {
     text-align: left;
     padding: 8px;
@@ -340,11 +375,10 @@ input {
         text-align: left;
    }
 }
-/* ME DEBUGGING STUFF*/
-/* Add a black background color to the top navigation */
+
 .topnav {
-    background-color: rgb(199, 223, 244);
-    overflow: hidden;
+    background-color: white;
+    overflow: hidden; /* prevent links from overflowing */
 }
 /* Style the links inside the navigation bar */
 .topnav > a > img {
@@ -362,7 +396,7 @@ input {
 }
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
-    display: none;
+    display: none; /* hide it */
 }
 
 /* Style the dropdown button to fit inside the topnav */
@@ -377,11 +411,13 @@ input {
     margin: 0;
 }
 .topnav a:hover, .dropdown:hover .dropbtn {
+    /* When the mouse hovers over a navigation bar link or a dropdown button, change the cursor to a custom image and start an infinite animation */
     cursor: url('https://uploads-ssl.webflow.com/62af52cf612c974768d3d8c9/6391280847a38f3cf5faf282_Group%202%20(7).svg'), auto !important;
     animation: tilt-n-move-shaking 0.25s infinite;
     color: #004277;
 }
 .dropdown-content a:hover {
+    /* When the mouse hovers over a navigation bar link or a dropdown button, change the cursor to a custom image and start an infinite animation */
     cursor: url('https://uploads-ssl.webflow.com/62af52cf612c974768d3d8c9/6391280847a38f3cf5faf282_Group%202%20(7).svg'), auto !important;
     animation: tilt-n-move-shaking 0.25s infinite;
     color: #004277;
