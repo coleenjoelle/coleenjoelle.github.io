@@ -213,7 +213,7 @@ body {
      padding: 1em;
      margin: 1cm;
 }
- #KATRINA, #TIMELINE, .professor3 {
+ #KATRINA, #TIMELINE, .professor3, #buttonmap {
      background-color: #67ADE0;
      border-style: solid;
      border-width: .3em;
@@ -545,4 +545,66 @@ body {
     /* position on screen */
      color: #d8d8d8 !important;
     /* overrule colors */
+}
+
+#smcbuttonmap {
+    position: relative;
+    background-color: white;
+}
+.dot {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+}
+#angela {
+    left: 675px;
+    top: 387px;
+}
+#opus {
+    top: 278px;
+    left: 872px;
+}
+#lemans {
+    top: 675px;
+    left: 704px;
+}
+#mccandless {
+    left: 598px;
+    top: 482px;
+}
+#holycross {
+    left: 473px;
+    top: 910px;
+}
+#regina {
+    left: 366px;
+    top: 719px;
+}
+#spesunica {
+    left: 963px;
+    top: 558px;
+}
+#science {
+    left: 849px;
+    top: 554px;
+}
+#library {
+    left: 762px;
+    top: 550px;
+}
+#madeleva {
+    left: 939px;
+    top: 681px;
+}
+#studentcenter {
+    left: 565px;
+    top: 557px;
+}
+
+#backtohome {
+    color: #a3e3ff;
+    cursor: url('https://uploads-ssl.webflow.com/62af52cf612c974768d3d8c9/6391280847a38f3cf5faf282_Group%202%20(7).svg'), auto !important;
 }
