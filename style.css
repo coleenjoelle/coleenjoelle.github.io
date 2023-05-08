@@ -140,11 +140,17 @@ body {
     /* Adds an underline decoration to the text content of the 'th' element */
 }
  .cox {
+    /* Style for elements with class "cox" */
+    /* Set background color to khaki */
      background-color: khaki;
+     /* Set text color to black */
      color: black;
 }
  .dwyer {
+    /* Style for elements with class "dwyer" */
+    /* Set background color to darkseagreen */    
      background-color: darkseagreen;
+     /* Set text color to black */
      color: black;
 }
  .colorBlock {
@@ -277,11 +283,17 @@ body {
      height: 4cm;
 }
  .bodyLink {
+    /* Style for elements with class "bodyLink", used for links in the body of the page */
+    /* Set text color to #a3e3ff */
      color: #a3e3ff;
+     /* Add underline to text */
      text-decoration: underline;
 }
  .bodyLink:hover {
+    /* Style for elements with class "bodyLink" when cursor hovers over, used for links in the body of the page */
+    /* Set text color to #79b6d0 */
      color: #79b6d0;
+     /* Add underline to text */
      text-decoration: underline;
 }
 /* The following formats the tables for classes*/
