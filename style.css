@@ -180,30 +180,35 @@ body {
      border-width: .3em;
     /* Add 1em of padding on all sides */
      padding: 1em;
+     margin: 1cm;
 }
  #CAM{
      background-color: #1170CB;
      border-style: solid;
      border-width: .3em;
      padding: 1em;
+     margin: 1cm;
 }
  #SAM{
      background-color: #417dc1;
      border-style: solid;
      border-width: .3em;
      padding: 1em;
+     margin: 1cm;
 }
  #PAM{
      background-color: #67ADE0;
      border-style: solid;
      border-width: .3em;
      padding: 1em;
+     margin: 1cm;
 }
  #ITREDS{
      background-color: #4D8DDC;
      border-style: solid;
      border-width: .3em;
      padding: 1em;
+     margin: 1cm;
 }
  #KAYRA, #BREAKDOWN, .professor1, #MERCH {
      background-color: #1170CB;
