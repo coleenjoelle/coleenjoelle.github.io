@@ -1,0 +1,117 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Apply the specified font-family */
+  body {
+    font-family: 'Playfair Display', serif;
+    background-color: #de90a9;
+    color: #24724e;
+  }
+  
+  body {
+    font-family: 'Playfair Display', serif;
+    background-color: #70ad91;
+    color: #922e4e;
+  }
+  
+  
+  /* Style the header */
+  header {
+    background-color: #922e4e;
+    color: #f6dee6;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Style the navigation menu */
+  nav {
+    background-color: #333;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #f6dee6;
+  }
+  
+  /* Style the main content area */
+  .container {
+    padding: 15px;
+    margin-top: 15px;
+  }
+  
+  article {
+    background-color: #f6dee6;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  /* Style the sidebar */
+  aside {
+    background-color: #70ad91;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  /* Style links in the sidebar */
+  aside a {
+    color: #24724e;
+  }
+  
+  aside ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the footer (if you have one) */
+  footer {
+    background-color: #222;
+    color: #f6dee6;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Add some spacing and alignment to the content */
+  h1, h2 {
+    margin-top: 20px;
+  }
+      /* Add responsive styles for blog posts */
+      .blog-post {
+        background-color: #d0e7dd;
+        color: #70ad91;
+        border: 1px solid #d0e7dd;
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+  
+      /* Use Bootstrap classes for responsive design */
+      @media (max-width: 576px) {
+        .col-md-4 {
+          flex-basis: 100%;
+        }
+      }
+  
+      @media (min-width: 576px) {
+        .col-sm-6 {
+          flex-basis: calc(50% - 20px);
+        }
+      }
+  
+      @media (min-width: 768px) {
+        .col-md-4 {
+          flex-basis: calc(33.3333% - 20px);
+        }
+      }
