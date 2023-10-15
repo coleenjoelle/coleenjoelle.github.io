@@ -19,7 +19,7 @@
                     <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Blog</a>
+                    <a class="nav-link" href="src/blog.html">Blog</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Makeup</a>
@@ -34,7 +34,7 @@
     <div class="container">
         <div class="row">
             <div class="col-4 text-center">
-                <img width="200px" class="img-thumbnail rounded-circle" src="../IMG/cjkirby.jpeg" alt="CJ's Fav Pic">
+                <img width="200px" class="img-thumbnail rounded-circle" src="IMG/cjkirby.jpeg" alt="CJ's Fav Pic">
                 <div class="abtme">
                     <strong>Saint Mary's College</strong><br>
                     Computing and Applied Math '23<br>
@@ -114,15 +114,15 @@
               <form id="contact-form">
                 <div class="form-group">
                   <label for="name">Name:</label>
-                  <input type="text" class="form-control" id="name" name="entry.1234567890" placeholder="Your Name" required>
+                  <input type="text" class="form-control" id="name" name="entry.1502715530" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
                   <label for="email">Email:</label>
-                  <input type="email" class="form-control" id="email" name="entry.0987654321" placeholder="Your Email" required>
+                  <input type="email" class="form-control" id="email" name="entry.1148607252" placeholder="Your Email" required>
                 </div>
                 <div class="form-group">
                   <label for="message">Message:</label>
-                  <textarea class="form-control" id="message" name="entry.5678901234" rows="4" placeholder="Your Message" required></textarea>
+                  <textarea class="form-control" id="message" name="entry.1397480856" rows="4" placeholder="Your Message" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
@@ -183,6 +183,56 @@
                 hiddenDiv.style.display = "block";
             }
         });
+          // JavaScript for filtering blog posts
+    const filters = document.querySelectorAll(".filter");
+
+    filters.forEach((filter) => {
+      filter.addEventListener("click", (e) => {
+        e.preventDefault();
+        const category = filter.getAttribute("data-category");
+        filterPosts(category);
+      });
+    });
+
+    function filterPosts(category) {
+      const blogPosts = document.querySelectorAll(".blog-post");
+
+      blogPosts.forEach((post) => {
+        const postCategory = post.getAttribute("data-category");
+
+        if (category === "all" || postCategory === category) {
+          post.style.display = "block";
+        } else {
+          post.style.display = "none";
+        }
+      });
+    }
+    // JavaScript for submitting the form data to Google Forms
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      const url = "https://docs.google.com/forms/u/1/d/e/1FAIpQLSeQiehgf12KMMDHBtuH4WznPJ8wr3TYUbMv_8CYSfyLQZgDHA/formResponse";
+      fetch(url, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors", // Cross-origin request, so "no-cors" mode
+      })
+      .then(response => {
+        if (response.type === 'opaque') {
+          // If the response type is 'opaque', it's a successful CORS request.
+          alert("Form submitted successfully!");
+          form.reset(); // Clear the form
+        } else {
+          // If the response type is not 'opaque', there might be an issue.
+          alert("Form submission failed. Please try again.");
+        }
+      })
+      .catch(error => {
+        // Handle network errors
+        console.error("Network error:", error);
+      });
+    });
     </script>
 </body>
 </html>
