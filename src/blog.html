@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Coleen's Blog</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Coleen's Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Makeup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Games</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="outline">
+    <h1>Coleen Joelle Valencia</h1>
+    <h5>Senior student at Notre Dame studying Computer Science graduating May 2024. 
+      Saint Mary's College (Notre Dame) 2023 alumna with a Bachelor's of Science in Computing and Applied Mathematics.
+      Interests in Data Analytics, Software Engineering, and Web Development.
+    </h5>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <aside>
+          <h3>Filter by Blog Type</h3>
+          <ul>
+            <li><a href="#" class="filter" data-category="all">All Posts</a></li>
+            <li><a href="#" class="filter" data-category="food">Food</a></li>
+            <li><a href="#" class="filter" data-category="projects">Projects</a></li>
+            <li><a href="#" class="filter" data-category="life">Life</a></li>
+          </ul>
+        </aside>
+      </div>
+      <div class="col-md-9">
+        <div class="row blog-posts">
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="blog-post" data-category="food">
+              <h2>Food Post</h2>
+              <p>This is a food blog post.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="blog-post" data-category="projects">
+              <h2>Projects Post</h2>
+              <p>This is a projects blog post.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="blog-post" data-category="life">
+              <h2>Life Post</h2>
+              <p>This is a life blog post.</p>
+            </div>
+          </div>
+          <!-- Add more blog posts with appropriate data-category attributes -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <footer>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Connect with me on:</h3>
+          <a href="https://github.com/coleenjoelle" target="_blank">GitHub</a><br>
+          <a href="https://www.linkedin.com/in/coleenjoelle" target="_blank">LinkedIn</a>
+        </div>
+        <div class="col-md-6">
+          <h3>Get in contact with me!</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="name" name="entry.1234567890" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" name="entry.0987654321" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea class="form-control" id="message" name="entry.5678901234" rows="4" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // JavaScript for filtering blog posts
+    const filters = document.querySelectorAll(".filter");
+
+    filters.forEach((filter) => {
+      filter.addEventListener("click", (e) => {
+        e.preventDefault();
+        const category = filter.getAttribute("data-category");
+        filterPosts(category);
+      });
+    });
+
+    function filterPosts(category) {
+      const blogPosts = document.querySelectorAll(".blog-post");
+
+      blogPosts.forEach((post) => {
+        const postCategory = post.getAttribute("data-category");
+
+        if (category === "all" || postCategory === category) {
+          post.style.display = "block";
+        } else {
+          post.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
